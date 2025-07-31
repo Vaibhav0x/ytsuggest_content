@@ -16,17 +16,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-bm8#nx6k)$y5di7z9=etl=3&8o6cp5dpl*9=dg7*@fhecniy_&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 YOUTUBE_API_KEY=os.getenv("YT_API_KEY")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["web-production-8742c.up.railway.app", "localhost", "127.0.0.1"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://yt-suggest-zeta.vercel.app",  # ✅ your deployed UI
 ]
-CORS_ALLOW_ALL_ORIGINS = True  # ⚠️ Use ONLY in development
-
+CORS_ALLOW_ALL_ORIGINS = False  
 # Application definition
 
 INSTALLED_APPS = [
